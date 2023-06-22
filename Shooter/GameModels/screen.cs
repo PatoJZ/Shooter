@@ -11,7 +11,7 @@ namespace Shooter.GameModels
     {
         public Moderator.screen type; //Esta es para definir si es la pantalla de inicio, juego o Final
         public List<UtalText> texts = new List<UtalText>();
-        public List<Button> buttons = new List<Button>();
+        public List<System.Windows.Forms.Button> buttons = new List<System.Windows.Forms.Button>();
 
         // No se qué más puedas llegar a necesitar para una pantalla, pero feel free
         // de cambiarlo como necesites
@@ -20,10 +20,10 @@ namespace Shooter.GameModels
         {
             this.type = type;
             texts = new List<UtalText>();
-            buttons = new List<Button>();
+            buttons = new List<System.Windows.Forms.Button>();
         }
 
-        public screen(Moderator.screen type, List<UtalText> texts, List<Button> buttons) 
+        public screen(Moderator.screen type, List<UtalText> texts, List<System.Windows.Forms.Button> buttons) 
         {
             this.type = type;
             this.texts = texts;
