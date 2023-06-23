@@ -24,10 +24,16 @@ namespace CanvasDrawing.UtalEngine2D_2023_1.Physics
         {
             PhysicsEngine.allNewRigidbodies.Add(this);
         }
+        public void SetTransform(Transform transform)
+        {
+            this.transform = transform;
+            lastPos = transform.position;
+        }
         public void CreateCircleCollider(float radius)
         {
             colliders.Add(new CircleCollider(this, radius));
         }
+
         public bool CheckCollision(Rigidbody otherRigid)
         {
             foreach(Collider myC in colliders)

@@ -22,9 +22,8 @@ namespace Shooter.GameModels
         public UtalText Score = new UtalText(Convert.ToString(score), 20, 20);
         public List<GameModels.screen> screens = new List<GameModels.screen>();
         public GameModels.screen current;
-        Image TurretImage = Properties.Resources.Enemigo_Rayo_Idle;
-        private button changeScreenButton;
-        private bool isButtonDestroyed = false;
+        
+        
 
         public Moderator(Player player, Image spriteImage, Vector2 buttonSize, float xPos, float yPos)
         {
@@ -35,14 +34,11 @@ namespace Shooter.GameModels
             screens.Add(new GameModels.screen(screen.Fin));
             current = screens.Find(c => c.type == screen.Inicio); //screen.Inicio
 
-            // Crear el botón para cambiar de pantalla
-            changeScreenButton = new button(spriteImage, buttonSize, xPos, yPos);
            
         }
 
         public override void Update()
         {
-            CheckChangeScreenButton();
 
             if (current.type == screen.Juego)
             {
@@ -71,15 +67,6 @@ namespace Shooter.GameModels
                 {
 
                 }
-            }
-        }
-        private void CheckChangeScreenButton()
-        {
-            if (changeScreenButton == null && current.type == screen.Inicio)
-            {
-                current = screens.Find(c => c.type == screen.Juego);
-                Console.WriteLine("Cambio de pantalla");
-                new Turret(TurretImage, new Vector2(50, 50), 100, 100);
             }
         }
     }

@@ -7,7 +7,7 @@ namespace Shooter
     {
         Image playerImage = global::Shooter.Properties.Resources.CorrerPistolas_2;
       
-        Image buttonimage = Properties.Resources.bola; //provisioria, ahí le cambias a lo que gustes
+    
 
         private Moderator mod;
 
@@ -20,7 +20,7 @@ namespace Shooter
             System.Windows.Forms.Button start = new System.Windows.Forms.Button();
 
 
-            mod = new Moderator(new Player(200, playerImage, new Vector2(50, 50), 0, 0), buttonimage , new Vector2(60, 50), 50, 50);
+            mod = new Moderator(new Player(200, playerImage, new Vector2(50, 50), 0, 0), new Vector2(60, 50), 50, 50);
             mod.current = inicioScreen;
 
             mod.screens.Add(inicioScreen);

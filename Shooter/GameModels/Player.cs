@@ -16,7 +16,7 @@ namespace Shooter.GameModels
         public float speed;
         public Camera myCam;
         public Vector2 lastPos;
-        public Image bulletImage = global::Shooter.Properties.Resources.bola;
+        public Image bulletImage = global::Shooter.Properties.Resources.frame_01;
         public float recoil = 0.3f;
         public float inmunity;
 

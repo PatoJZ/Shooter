@@ -15,7 +15,7 @@ namespace Shooter.GameModels
         public int HP = 3;
         public float recoil;
         public int bulletSpeed = 500;
-        public Image bulletImage = Properties.Resources.bola;
+        public Image bulletImage = Properties.Resources.frame_01;
 
         public Enemy(Image newSprite, Vector2 newSize, float xPos = 0, float yPos = 0) : base(newSprite, newSize, xPos, yPos)
         {
